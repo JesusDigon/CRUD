@@ -46,15 +46,15 @@ public class ModeloHashMap extends ModeloAbs
      }
     
      public void listarProductos () {
-    	 for(int i=0;i<lista.size();i++) {
-    		 System.out.println(lista.get(i));
-    	 }
+    	 
+    		 System.out.println(lista.values());
+    	 
      }
     
      public void listarPocoStock() {
-    	 for (int i=0;i<lista.size();i++) {
-     		if(lista.get(i).getStock_min()>=lista.get(i).getStock()) {
-     			System.out.println(lista.get(i));
+    	 for (Producto p : lista.values()) {
+     		if(p.getStock_min()>=p.getStock()) {
+     			System.out.println(p);
      		}
      	}
      }
